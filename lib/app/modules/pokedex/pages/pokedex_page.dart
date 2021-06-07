@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:pokemon/app/core/models/pokemon_model.dart';
+import 'package:pokemon/app/core/widgets/loader_widget.dart';
 import 'package:pokemon/app/modules/pokedex/pages/pokedex_controller.dart';
 import 'package:pokemon/app/modules/pokedex/pages/widgets/pokemon_card.dart';
-import 'package:pokemon/app/core/widgets/loader_widget.dart';
 
 class PokedexPage extends StatefulWidget {
   const PokedexPage({Key key}) : super(key: key);

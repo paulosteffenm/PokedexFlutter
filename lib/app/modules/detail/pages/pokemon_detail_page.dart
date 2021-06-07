@@ -56,7 +56,7 @@ class PokemonDetailPage extends StatelessWidget {
   Widget _pokemonImage(double availableHeight) {
     return Image(
       image: NetworkImage(pokemon.pokemonDetail.urlImg),
-      height: availableHeight * 0.4,
+      height: availableHeight * 0.3,
       fit: BoxFit.fill,
     );
   }

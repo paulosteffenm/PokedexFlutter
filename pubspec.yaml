@@ -16,6 +16,8 @@ dependencies:
   flutter_modular: ^2.0.1
   bloc_pattern: ^2.5.1
   rxdart: ^0.24.0
+  firebase_crashlytics: "^0.4.0+1"
+  firebase_core : ^0.7.0
 
 dev_dependencies:
   flutter_test:
