@@ -52,8 +52,8 @@ class _PokedexPageState extends ModularState<PokedexPage, PokedexController> {
     return AppBar(
       backgroundColor: Colors.red,
       toolbarHeight: 45,
-      title: new Center(
-        child: new Text(
+      title: const Center(
+        child: Text(
           'Pokemon',
           textAlign: TextAlign.center,
         ),

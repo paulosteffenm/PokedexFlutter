@@ -31,7 +31,7 @@ class PokemonCard extends StatelessWidget {
                 height: availableHeight * 0.5,
                 fit: BoxFit.fill,
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Column(
                   children: [
@@ -50,7 +50,7 @@ class PokemonCard extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(
                         pokemon.name.capitalize(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
                         ),

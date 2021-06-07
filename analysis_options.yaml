@@ -1,0 +1,13 @@
+include: package:lint/analysis_options.yaml
+
+analyzer:
+  strong-mode:
+    implicit-casts: true
+    implicit-dynamic: true
+
+linter:
+  rules:
+    prefer_single_quotes: true
+    lines_longer_than_80_chars: false
+    avoid_print: false
+    prefer_const_literals_to_create_immutables: false

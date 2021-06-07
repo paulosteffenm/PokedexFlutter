@@ -20,7 +20,7 @@ class PokedexService extends HttpService {
           .data['pokemon_entries']
           .map((model) => Pokemon.fromJson(model)));
 
-      for (Pokemon pokemon in data) {
+      for (final Pokemon pokemon in data) {
         if (pokemon.entryNumber == 101) {
           pokemon.pokemonDetail = null;
         } else {
@@ -43,7 +43,7 @@ class PokedexService extends HttpService {
       final response = await _http.get('pokemon/$id');
 
       if (response.statusCode == 200) {
-        PokemonDetail data = PokemonDetail.fromJson(response.data);
+        final PokemonDetail data = PokemonDetail.fromJson(response.data);
         return data;
       }
       return null;

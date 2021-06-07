@@ -5,7 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 import 'app/app_module.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;

@@ -4,20 +4,20 @@ import 'package:pokemon/app/themes/pokemon_type.dart';
 import 'package:pokemon/app/themes/string_theme.dart';
 
 class PokemonDetailPage extends StatelessWidget {
-  PokemonDetailPage({Key key, @required this.pokemon}) : super(key: key);
+  const PokemonDetailPage({Key key, @required this.pokemon}) : super(key: key);
   final Pokemon pokemon;
 
   Widget _appbar(BuildContext context) {
     return AppBar(
       leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white),
+        icon: const Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () => Navigator.of(context).pop(),
       ),
       backgroundColor: Colors.grey,
       toolbarHeight: 45,
       title: Text(
         pokemon.name.capitalize().capitalize(),
-        style: TextStyle(color: Colors.black),
+        style: const TextStyle(color: Colors.black),
       ),
       centerTitle: true,
     );
@@ -26,16 +26,15 @@ class PokemonDetailPage extends StatelessWidget {
   Widget _detailTitle() {
     return Row(
       mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
           pokemon.name.capitalize(),
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Container(
@@ -64,16 +63,16 @@ class PokemonDetailPage extends StatelessWidget {
   Widget _pokemonStatusBar(int baseStatus, String statusName) {
     return Column(
       children: [
-        Container(
+        SizedBox(
           height: 20,
           child: FittedBox(
             child: Text(statusName),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
-        Container(
+        SizedBox(
           height: 60,
           width: 10,
           child: Stack(
@@ -83,9 +82,8 @@ class PokemonDetailPage extends StatelessWidget {
                 decoration: BoxDecoration(
                   border: Border.all(
                     color: Colors.white,
-                    width: 1.0,
                   ),
-                  color: Color.fromRGBO(220, 220, 200, 1),
+                  color: const Color.fromRGBO(220, 220, 200, 1),
                   borderRadius: BorderRadius.circular(1),
                 ),
               ),
@@ -107,16 +105,16 @@ class PokemonDetailPage extends StatelessWidget {
 
   Widget _pokemonStatus() {
     return Card(
-      color: Color.fromRGBO(164, 164, 164, 1),
+      color: const Color.fromRGBO(164, 164, 164, 1),
       elevation: 6,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Column(
         children: [
           Align(
             alignment: Alignment.centerLeft,
             child: Container(
               margin: const EdgeInsets.only(left: 23.0),
-              child: Text(
+              child: const Text(
                 'Stats',
               ),
             ),
@@ -128,31 +126,31 @@ class PokemonDetailPage extends StatelessWidget {
               children: [
                 Flexible(
                   fit: FlexFit.tight,
-                  child: _pokemonStatusBar(pokemon.pokemonDetail.hp, "HP"),
+                  child: _pokemonStatusBar(pokemon.pokemonDetail.hp, 'HP'),
                 ),
                 Flexible(
                   fit: FlexFit.tight,
-                  child: _pokemonStatusBar(pokemon.pokemonDetail.attack, "Atk"),
-                ),
-                Flexible(
-                  fit: FlexFit.tight,
-                  child:
-                      _pokemonStatusBar(pokemon.pokemonDetail.defense, "Def"),
-                ),
-                Flexible(
-                  fit: FlexFit.tight,
-                  child: _pokemonStatusBar(
-                      pokemon.pokemonDetail.specialAttack, "Sp.Atk"),
-                ),
-                Flexible(
-                  fit: FlexFit.tight,
-                  child: _pokemonStatusBar(
-                      pokemon.pokemonDetail.specialDefense, "Sp.Def"),
+                  child: _pokemonStatusBar(pokemon.pokemonDetail.attack, 'Atk'),
                 ),
                 Flexible(
                   fit: FlexFit.tight,
                   child:
-                      _pokemonStatusBar(pokemon.pokemonDetail.speed, "Speed"),
+                      _pokemonStatusBar(pokemon.pokemonDetail.defense, 'Def'),
+                ),
+                Flexible(
+                  fit: FlexFit.tight,
+                  child: _pokemonStatusBar(
+                      pokemon.pokemonDetail.specialAttack, 'Sp.Atk'),
+                ),
+                Flexible(
+                  fit: FlexFit.tight,
+                  child: _pokemonStatusBar(
+                      pokemon.pokemonDetail.specialDefense, 'Sp.Def'),
+                ),
+                Flexible(
+                  fit: FlexFit.tight,
+                  child:
+                      _pokemonStatusBar(pokemon.pokemonDetail.speed, 'Speed'),
                 ),
               ],
             ),
@@ -164,33 +162,33 @@ class PokemonDetailPage extends StatelessWidget {
 
   Widget _pokemonShape() {
     return Card(
-      color: Color.fromRGBO(48, 167, 215, 1),
+      color: const Color.fromRGBO(48, 167, 215, 1),
       elevation: 6,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Column(
             children: [
-              Text(
+              const Text(
                 'Height',
                 style: TextStyle(color: Colors.white, fontSize: 30),
               ),
               Text(
                 '${pokemon.pokemonDetail.height / 10} m',
-                style: TextStyle(color: Colors.black, fontSize: 30),
+                style: const TextStyle(color: Colors.black, fontSize: 30),
               ),
             ],
           ),
           Column(
             children: [
-              Text(
+              const Text(
                 'Weight',
                 style: TextStyle(color: Colors.white, fontSize: 30),
               ),
               Text(
                 '${pokemon.pokemonDetail.weight / 10} kg',
-                style: TextStyle(color: Colors.black, fontSize: 30),
+                style: const TextStyle(color: Colors.black, fontSize: 30),
               ),
             ],
           )
@@ -207,7 +205,7 @@ class PokemonDetailPage extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: Container(
             margin: const EdgeInsets.only(left: 23.0),
-            child: Text(
+            child: const Text(
               'Type',
               style: TextStyle(color: Colors.black, fontSize: 30),
             ),
@@ -215,7 +213,7 @@ class PokemonDetailPage extends StatelessWidget {
         ),
         Card(
           color: Colors.white,
-          margin: EdgeInsets.all(20),
+          margin: const EdgeInsets.all(20),
           child:
               pkmType.pokemonType(pokemon.pokemonDetail.types, availableWidth),
         ),
