@@ -34,7 +34,7 @@ class _PokedexPageState extends ModularState<PokedexPage, PokedexController> {
     controller.initState();
     pokemonStream = controller.pokedexBloc.pokemons;
 
-    refresh();
+    //refresh();
   }
 
   void refresh() {
@@ -80,6 +80,7 @@ class _PokedexPageState extends ModularState<PokedexPage, PokedexController> {
             return Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: ListView.builder(
+                physics: const AlwaysScrollableScrollPhysics(),
                 itemCount: snapshot.data?.length,
                 itemBuilder: (context, index) {
                   final Pokemon pokemon = snapshot.data[index];
