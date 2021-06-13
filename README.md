@@ -27,6 +27,7 @@ flutter pub get
 
 * [lint](https://pub.dev/packages/lint)
 
+* [firebase_analytics](https://pub.dev/packages/firebase_analytics)
 
 
 
