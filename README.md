@@ -1,5 +1,6 @@
 # Pokedex App
 
+![image](https://user-images.githubusercontent.com/55364610/121075994-3dcbc980-c7ac-11eb-928f-f5f0a9ee1a61.png)
 
 # Build Setup
 
