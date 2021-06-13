@@ -31,6 +31,8 @@ class _PokedexPageState extends ModularState<PokedexPage, PokedexController> {
   void initState() {
     super.initState();
 
+    //uncomment this line to see Crashlytics works
+    //FirebaseCrashlytics.instance.crash();
     controller.initState();
     pokemonStream = controller.pokedexBloc.pokemons;
   }
