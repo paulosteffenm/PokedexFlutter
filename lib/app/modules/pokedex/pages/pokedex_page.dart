@@ -33,8 +33,6 @@ class _PokedexPageState extends ModularState<PokedexPage, PokedexController> {
 
     controller.initState();
     pokemonStream = controller.pokedexBloc.pokemons;
-
-    //refresh();
   }
 
   void refresh() {
