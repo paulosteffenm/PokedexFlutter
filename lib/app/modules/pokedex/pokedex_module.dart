@@ -1,9 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:pokemon/app/bloc/pokedex_bloc.dart';
 import 'package:pokemon/app/core/services/pokedex_service.dart';
+import 'package:pokemon/app/modules/detail/pages/pokemon_detail_page.dart';
 import 'package:pokemon/app/modules/pokedex/pages/pokedex_controller.dart';
 import 'package:pokemon/app/modules/pokedex/pages/pokedex_page.dart';
-import 'package:pokemon/app/modules/detail/pages/pokemon_detail_page.dart';
 
 class PokedexModule extends ChildModule {
   @override
@@ -11,7 +11,6 @@ class PokedexModule extends ChildModule {
         Bind((i) => PokedexController()),
         Bind((i) => PokedexBloc()),
         Bind((i) => PokedexService()),
-        Bind((i) => PokedexController()),
       ];
 
   @override
